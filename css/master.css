@@ -1,9 +1,11 @@
 *{
   box-sizing: border-box;
   margin: 0;
+  cursor: default;
 }
 
 body{
+  index: 0;
   margin: 0;
   min-height: 100vh;
   font-family: 'Rubik', sans-serif;
@@ -24,8 +26,40 @@ strong{
   flex-direction: column;
 }
 
+
+
 main{
+  position: relative;
   min-height: 100vh;
+}
+
+/* ------------ */
+/* blob section */
+/* ------------ */
+
+body::before,
+body::after{
+  position: absolute;
+  content: '';
+  width: 60%;
+  index:-1;
+  height: 80vh;
+}
+
+body::before{
+  top: 0;
+  left: -30%;
+  background-color: hsl(264, 100%, 61%);
+  background-image: linear-gradient(hsl(293, 100%, 63%), hsl(264, 100%, 61%));
+  border-bottom-right-radius: 50%;
+}
+
+body::after{
+  bottom: 0;
+  right: -50%;
+  background-color: hsl(270, 20%, 96%);
+  border-top-left-radius: 50%;
+
 }
 
 /* ------------- */
@@ -143,6 +177,40 @@ main{
   padding-right: 1rem;
   font-size: 20px;
   margin-left: auto;
+}
+
+.chatbox__container{
+  position:relative;
+  padding:0;
+  margin:0;
+}
+
+.chatbox{
+  text-indent: 1rem;
+  font-size: 1rem;
+  width: 100%;
+  padding: .5em;
+  border-radius: 2em;
+  border-color: transparent;
+  outline: none;
+}
+
+.chatbox:focus{
+  border-color: hsl(276, 55%, 52%);
+}
+
+.chatbox__img{
+  position: absolute;
+  right: .25rem;
+  top: calc(50% - .5em);
+  font-size: 2rem;
+  color: hsl(271, 36%, 24%);
+  transition: all 0.3s linear;
+  cursor: pointer;
+}
+
+.chatbox__img:active{
+  transform: scale(1.1);
 }
 
 /* --------------- */
