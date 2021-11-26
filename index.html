@@ -5,7 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+
+  <!-- Google fonts :: to add rubik font  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <!-- fontawesome :: to add svg icons -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+  <link rel="stylesheet" href="./css/master.css">
+
   <title>Frontend Mentor | [Challenge Name Here]</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
@@ -15,37 +24,64 @@
   </style>
 </head>
 <body>
+  <main class="flex">
+    <div>
+      <div class="app">
+        <div class="app__header">
+          <i class="fas fa-chevron-left"></i>
+          <img src="./images/avatar.jpg" alt="avtaar" class="avtaar">
+          <div>
+            <h3>Samuel Green</h3>
+            <p>Available to Walk</p>
+          </div>
+          <i class="fas fa-ellipsis-v app__header__option"></i>
+        </div>
 
-  Samuel Green
-  Available to Walk
+        <div class="app__body">
+          <p class="msg msg--left">That sounds great. I’d be happy to discuss more.</p>
 
-  That sounds great. I’d be happy with that.
+          <p class="msg msg--left">Could you send over some pictures of your dog, please?</p>
 
-  Could you send over some pictures of your dog, please?
+          <div class="msg--img">
+            <img src="./images/dog-image-1.jpg" alt="cute dog">
+            <img src="./images/dog-image-2.jpg" alt="cute dog">
+            <img src="./images/dog-image-3.jpg" alt="cuter dog">
+          </div>
+          <p class="msg msg--right">Here are a few pictures. She’s a happy girl!</p>
 
-  Here are a few pictures. She’s a happy girl!
+          <p class="msg msg--right">Can you make it?</p>
 
-  Can you make it?
+          <p class="msg  msg--left">She looks so happy! The time we discussed works. How long shall I take her out for?</p>
 
-  She looks so happy! The time we discussed works. How long shall I take her out for?
+          <div class="msg  msg--left msg--pay">
+            <i class="far fa-circle"></i>
+            <p>30 minute walk</p>
+            <strong>$29</strong>
+          </div>
 
-  30 minute walk
-  $29
+          <div class="msg  msg--left msg--pay">
+          <i class="far fa-circle"></i>
+          <p>1 hour walk</p>
+          <strong>$49</strong>
+        </div>
 
-  1 hour walk
-  $49
+          <p>Type a message… <i class="fas fa-chevron-circle-right"></i></p>
+        </div>
+      </div>
+    </div>
 
-  Type a message…
+    <div class="content">
+        <h1>Simple booking</h1>
 
-  Simple booking
+        <p>Stay in touch with our dog walkers through the chat interface. This makes it easy to
+        discuss arrangements and make bookings. Once the walk has been completed you can rate
+        your walker and book again all through the chat.</p>
+    </div>
+  </main>
 
-  Stay in touch with our dog walkers through the chat interface. This makes it easy to 
-  discuss arrangements and make bookings. Once the walk has been completed you can rate 
-  your walker and book again all through the chat.
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+  <!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
     Coded by <a href="#">Your Name Here</a>.
-  </div>
+  </div> -->
 </body>
 </html>
