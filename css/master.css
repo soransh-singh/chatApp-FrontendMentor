@@ -10,6 +10,7 @@ body{
   min-height: 100vh;
   font-family: 'Rubik', sans-serif;
   line-height: 1.6;
+  position: relative;
 }
 
 img{
@@ -26,8 +27,6 @@ strong{
   flex-direction: column;
 }
 
-
-
 main{
   position: relative;
   min-height: 100vh;
@@ -37,28 +36,27 @@ main{
 /* blob section */
 /* ------------ */
 
-body::before,
-body::after{
+.blob{
   position: absolute;
   content: '';
-  width: 60%;
-  index:-1;
+  width: 30%;
+  index: 0;
   height: 80vh;
 }
 
-body::before{
+.blob__before{
   top: 0;
-  left: -30%;
+  left: 0%;
   background-color: hsl(264, 100%, 61%);
   background-image: linear-gradient(hsl(293, 100%, 63%), hsl(264, 100%, 61%));
-  border-bottom-right-radius: 50%;
+  border-bottom-right-radius: 100% 50%;
 }
 
-body::after{
+.blob__after{
   bottom: 0;
-  right: -50%;
+  right: 0%;
   background-color: hsl(270, 20%, 96%);
-  border-top-left-radius: 50%;
+  border-top-left-radius: 100% 50%;
 
 }
 
@@ -68,10 +66,10 @@ body::after{
 
 .app{
   max-width: 350px;
-  margin: 2rem auto;
+  margin: 4rem auto;
   border-radius: 2rem;
   overflow: hidden;
-  box-shadow: 8px 8px 32px hsl(0 0% 12%/.4);
+  box-shadow: 8px 16px 32px hsl(0 0% 12%/.4);
   border: solid .5rem white;
 }
 /* -- App header -- */
@@ -249,5 +247,11 @@ body::after{
 
   .content p{
     max-width: 450px;
+  }
+}
+
+@media (min-width:1000px){
+  .app{
+    margin: 4rem 4rem  4rem  auto;
   }
 }
